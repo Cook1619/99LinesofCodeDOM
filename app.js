@@ -12,21 +12,35 @@ button.addEventListener("click", function () {
         h3.appendChild(h3Text);
         div.appendChild(h3);
         document.body.appendChild(div);
-        for (let j = 99; j >= 1; j--) {
+        for (let j = 99; j > 0; j--) {
             if (j === 1) {
                 
                 let divText = document.createTextNode(`${friends[i]}`
-                    + `: ${j} line of code in the file, ${j} line of code; ${friends[i]} strikes one out, clears it all out, ${j} line of code in the file. `)
+                    + `: ${j} line of code in the file, ${j} line of code; ${friends[i]} strikes one out, clears it all out, ${j} line of code in the file. `);
+                div.appendChild(divText);
                 document.body.appendChild(div);
 
-            } else if (j !== 1) {
+            } else  {
 
                 divElse = document.createTextNode(`${friends[i]}`
-                    + `: ${j} lines of code in the file, ${j} lines of code; ${friends[i]} strikes one out, clears it all out, ${j} lines of code in the file. \n`)
+                    + `: ${j} lines of code in the file, ${j} lines of code; ${friends[i]} strikes one out, clears it all out, ${j} lines of code in the file. `)
                 div.appendChild(divElse);
                 document.body.appendChild(div)
             }
+            
         }
 
     }
 })
+
+
+// let divText = '';
+// if (j === 1) {
+//     divText = `${friends[i]}`
+//         + `: ${j} line of code in the file, ${j} line of code; ${friends[i]} strikes one out, clears it all out, ${j} line of code in the file. `;
+// } else if (j !== 1) {
+//     divText = `${friends[i]}`
+//         + `: ${j} lines of code in the file, ${j} lines of code; ${friends[i]} strikes one out, clears it all out, ${j} lines of code in the file. \n`;
+// }
+
+// div.appendChild(document.createTextNode(divText));
